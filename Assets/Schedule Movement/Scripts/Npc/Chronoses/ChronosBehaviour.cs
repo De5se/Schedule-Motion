@@ -1,26 +1,37 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 public class ChronosBehaviour : NPC
 {
-    [SerializeField] private ChronosState currentState;
+    [ShowInInspector, ReadOnly] 
+    public ChronosState CurrentState { get; private set; }
     
     private PatientRoom PatientRoom { get; set; }
     
-    public ChronosState CurrentState => currentState;
-
     public void ChangeState(ChronosState targetState)
     {
-        if (targetState == currentState)
+        if (targetState == CurrentState)
         {
             Debug.LogError($"Attempt to set the same state");
         }
         
-        currentState = targetState;
+        CurrentState = targetState;
     }
 
     public void SetPatientRoom(PatientRoom patientRoom)
     {
         PatientRoom = patientRoom;
+    }
+
+    public override void FinishInteraction()
+    {
+        var setFreeAfterFinish = currentInteraction.SetChronosFree;
+        base.FinishInteraction();
+
+        if (setFreeAfterFinish)
+        {
+            InvokeFreeAction();
+        }
     }
 
     public void SettleToRoom()
@@ -37,7 +48,7 @@ public class ChronosBehaviour : NPC
     
     private void CameToRoom()
     {
-        if (currentState == ChronosState.Settle)
+        if (CurrentState == ChronosState.Settle)
         {
             PatientRoom.SavePatient(this);
         }

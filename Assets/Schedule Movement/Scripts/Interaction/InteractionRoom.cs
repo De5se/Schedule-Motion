@@ -69,8 +69,12 @@ public class InteractionRoom : MonoBehaviour
         patientQueue.AddNpc(patient);
         TryMovePatients();
     }
-    
 
+    public void ClearPatientQueue()
+    {
+        patientQueue.ClearQueue();
+    }
+    
     private void TryMoveNpc()
     {
         TryMovePatients();
@@ -79,7 +83,7 @@ public class InteractionRoom : MonoBehaviour
     
     private void TryMovePatients()
     {
-        if (patientQueue.IsEmpty)
+        if (patientQueue == null || patientQueue.IsEmpty)
         {
             return;
         }

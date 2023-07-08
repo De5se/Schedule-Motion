@@ -9,8 +9,10 @@ namespace Schedule_Movement.Scripts
     public class InteractionPoint : MonoBehaviour
     {
         [SerializeField] private Transform employeeInteractionPoint;
+        [SerializeField] private bool setEmployeeFree;
         [SerializeField] private Transform chronosInteractionPoint;
-        
+        [SerializeField] private bool setChronosFree;
+
         [ShowInInspector, ReadOnly] private ChronosBehaviour _currentChronos;
         [ShowInInspector, ReadOnly] private Employee _currentEmployee;
 
@@ -28,7 +30,11 @@ namespace Schedule_Movement.Scripts
         protected ChronosBehaviour LastPatient;
 
         public event Action OnFree;
-        
+
+        public bool SetChronosFree => setChronosFree;
+
+        public bool SetEmployeeFree => setEmployeeFree;
+
         private void Awake()
         {
             _interactionItem = GetComponentInParent<InteractionItem>(true);
@@ -64,7 +70,6 @@ namespace Schedule_Movement.Scripts
         public void SetChronos(ChronosBehaviour chronos)
         {
             _currentChronos = chronos;
-            
             _currentChronos.SetInteraction(this, chronosInteractionPoint.position);
 
             if (_interactionType == InteractionType.Chronos)

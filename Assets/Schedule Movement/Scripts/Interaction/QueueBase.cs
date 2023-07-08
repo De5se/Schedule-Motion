@@ -29,5 +29,17 @@ namespace Schedule_Movement.Scripts
             Queue.RemoveAt(0);
             return npc;
         }
+
+        public List<NPC> ClearQueue()
+        {
+            List<NPC> returnList = new();
+            while (IsEmpty == false)
+            {
+                returnList.Add(GetNpc());
+            }
+            return returnList;
+        }
+
+        protected virtual void Awake(){}
     }
 }

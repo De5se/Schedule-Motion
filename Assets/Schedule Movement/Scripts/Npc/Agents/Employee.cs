@@ -16,17 +16,29 @@ namespace Schedule_Movement.Scripts.Npc.Agents
             }
 
             AgentState = targetState;
-
-            if (AgentState == AgentState.FreeTime)
-            {
-                InvokeFreeAction();
-            }
         }
 
         public override void SetInteraction(InteractionPoint interactionPoint, Vector3 targetPosition)
         {
             base.SetInteraction(interactionPoint, targetPosition);
             ChangeState(AgentState.Interaction);
+        }
+
+        public override void FinishInteraction()
+        {
+            var setFreeAfterFinish = currentInteraction.SetEmployeeFree;
+            base.FinishInteraction();
+
+            if (setFreeAfterFinish)
+            {
+                InvokeFreeAction();
+            }
+        }
+
+        protected override void InvokeFreeAction()
+        {
+            ChangeState(AgentState.FreeTime);
+            base.InvokeFreeAction();
         }
     }
 }

@@ -13,10 +13,9 @@ public class FreeTimePointsQueue : QueueBase
     private readonly Dictionary<NPC, Transform> _busyPoints = new();
 
     public event Action OnNewNpc;
-    
-    protected override void Start()
+
+    protected override void Awake()
     {
-        base.Start();
         AddPoints(transform);
     }
 

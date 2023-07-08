@@ -7,10 +7,10 @@ namespace Schedule_Movement.Scripts
     {
         [SerializeField] private Vector2 startTime;
         [SerializeField] private Vector2 finishTime;
-        [SerializeField] private InteractionRoom interactionRoom;
+        [SerializeField] private PeriodType periodType;
 
         public Vector2 StartTime => startTime;
         public Vector2 FinishTime => finishTime;
-        public InteractionRoom InteractionRoom => interactionRoom;
+        public PeriodType PeriodType => periodType;
     }
 }

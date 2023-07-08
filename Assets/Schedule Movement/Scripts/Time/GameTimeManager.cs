@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Schedule_Movement.Scripts;
 using UnityEngine;
 
 public class GameTimeManager : MonoBehaviour
@@ -42,6 +43,19 @@ public class GameTimeManager : MonoBehaviour
     public static bool IsTimeEqual(Vector2 time1, Vector2 time2)
     {
         return Math.Abs(VectorToIntTime(time1) - VectorToIntTime(time2)) < 1;
+    }
+    
+    public bool IsInsidePeriod(TimePeriod timePeriod)
+    {
+        float currentTime = VectorToIntTime(gameTime);
+        float periodStartTime = VectorToIntTime(timePeriod.StartTime);
+        float finishTime = VectorToIntTime(timePeriod.FinishTime);
+        
+        if (finishTime < periodStartTime)
+        {
+            return currentTime >= periodStartTime || currentTime < finishTime;
+        }
+        return currentTime >= periodStartTime && currentTime < finishTime;
     }
 
     public static float VectorToIntTime(Vector2 time)

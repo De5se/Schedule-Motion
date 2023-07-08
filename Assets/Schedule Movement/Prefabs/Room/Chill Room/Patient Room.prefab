@@ -77,7 +77,8 @@ GameObject:
   - component: {fileID: 1269609842325209917}
   - component: {fileID: 5609191758446897181}
   - component: {fileID: 7549067555859461186}
-  - component: {fileID: 5350677034638822224}
+  - component: {fileID: 3307586360022109461}
+  - component: {fileID: 7745532607932265565}
   m_Layer: 0
   m_Name: Patient Room
   m_TagString: Untagged
@@ -129,21 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420ffe51270094644a7d71fc3b7853f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patientScheduleManager: {fileID: 3307586360022109461}
   waitPoint: {fileID: 3977393019486309411}
   patientPrefab: {fileID: -2212279891026739423, guid: 8e8ba5379f4ddb542907bd1879d59e54, type: 3}
   patientsParent: {fileID: 3092404689205921256}
-  patientsInteractionRoom: {fileID: 5350677034638822224}
-  periods:
-  - startTime: {x: 0, y: 0}
-    finishTime: {x: 0, y: 30}
-    interactionRoom: {fileID: 5350677034638822224}
-  - startTime: {x: 0, y: 30}
-    finishTime: {x: 1, y: 0}
-    interactionRoom: {fileID: 5350677034638822224}
-  - startTime: {x: 1, y: 0}
-    finishTime: {x: 1, y: 30}
-    interactionRoom: {fileID: 5350677034638822224}
---- !u!114 &5350677034638822224
+--- !u!114 &3307586360022109461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,7 +143,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 310295645468385597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb6e4e96aef826428535c6dd1853942, type: 3}
+  m_Script: {fileID: 11500000, guid: bacc2cbcb75f4341b5d2355f60a64660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameTimeManager: {fileID: 0}
+  periods:
+  - startTime: {x: 0, y: 0}
+    finishTime: {x: 6, y: 0}
+    periodType: 4
+  - startTime: {x: 6, y: 0}
+    finishTime: {x: 8, y: 0}
+    periodType: 0
+  - startTime: {x: 8, y: 0}
+    finishTime: {x: 10, y: 30}
+    periodType: 1
+  - startTime: {x: 10, y: 30}
+    finishTime: {x: 12, y: 30}
+    periodType: 2
+  - startTime: {x: 12, y: 30}
+    finishTime: {x: 15, y: 30}
+    periodType: 0
+  - startTime: {x: 15, y: 30}
+    finishTime: {x: 17, y: 30}
+    periodType: 2
+  - startTime: {x: 17, y: 30}
+    finishTime: {x: 20, y: 30}
+    periodType: 3
+  - startTime: {x: 20, y: 30}
+    finishTime: {x: 23, y: 0}
+    periodType: 1
+  - startTime: {x: 23, y: 0}
+    finishTime: {x: 0, y: 0}
+    periodType: 0
+  patientsInteractionRoom: {fileID: 7745532607932265565}
+  studyRoom: {fileID: 0}
+  tavern: {fileID: 0}
+  park: {fileID: 0}
+--- !u!114 &7745532607932265565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310295645468385597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22aa99e2dfdaf8c4caadb9ac37aaf48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 8410369782110306619}
@@ -480,6 +516,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: setChronosFree
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
 --- !u!4 &2633019644413282882 stripped
@@ -549,6 +589,10 @@ PrefabInstance:
     - target: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_Name
       value: Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: setChronosFree
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: isBought
@@ -624,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: setChronosFree
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
 --- !u!4 &3623298647204485344 stripped
@@ -693,6 +741,10 @@ PrefabInstance:
     - target: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_Name
       value: Item (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: setChronosFree
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}

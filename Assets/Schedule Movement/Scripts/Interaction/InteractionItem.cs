@@ -10,19 +10,25 @@ public class InteractionItem : MonoBehaviour
     [SerializeField] private InteractionRoom interactionRoom;
     [SerializeField] private InteractionType interactionType;
     [SerializeField] private bool isBought;
-    [SerializeField] private InteractionPoint[] interactionPoint;
+    [ShowInInspector, ReadOnly]
+    private InteractionPoint[] _interactionPoint;
     
-    public bool HasPlace(InteractionType targetType) => isBought && interactionPoint.Any(ip => ip.HasNpcPlace(targetType));
+    public bool HasPlace(InteractionType targetType) => isBought && _interactionPoint.Any(ip => ip.HasNpcPlace(targetType));
 
     public InteractionType InteractionType => interactionType;
 
     public event Action OnFree;
-    
+
+    private void Awake()
+    {
+        _interactionPoint = GetComponentsInChildren<InteractionPoint>();
+    }
+
     private void Start()
     {
         UpdateItemState();
 
-        foreach (var ip in interactionPoint)
+        foreach (var ip in _interactionPoint)
         {
             ip.OnFree += () =>
             {
@@ -68,7 +74,7 @@ public class InteractionItem : MonoBehaviour
     }
 
     private InteractionPoint GetPointByType(InteractionType targetType) =>
-        interactionPoint.FirstOrDefault(ip => ip.HasNpcPlace(targetType));
+        _interactionPoint.FirstOrDefault(ip => ip.HasNpcPlace(targetType));
 
 
     public void AddItemWithoutEmployee()

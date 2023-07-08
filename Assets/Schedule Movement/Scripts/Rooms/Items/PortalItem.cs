@@ -54,7 +54,6 @@ public class PortalItem : MonoBehaviour
                 for (var j = 0; j < emptyPlaces; j++)
                 {
                     var patient = currentRoom.CreatePatient(creationPoint.position);
-                    patient.ChangeState(ChronosState.Reception);
                     receptionRoom.AddPatient(patient);
                     yield return _waitBetweenPatientsCreation;
                     if (++createdPatients >= maxPatientsInWave){yield break;}

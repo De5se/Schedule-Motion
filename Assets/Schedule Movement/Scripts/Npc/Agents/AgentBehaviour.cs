@@ -12,7 +12,7 @@ namespace Schedule_Movement.Scripts.Npc.Agents
         public void UpdatePatient(ChronosBehaviour patient)
         {
             _targetChronos = patient;
-            ChangeState(AgentState.Accompany);
+            InvokeFreeAction();
             SetDestination(patient.NavMeshAgent.destination);
             patient.DestinationReachedAction += StopAccompany;
         }

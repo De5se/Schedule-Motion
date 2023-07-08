@@ -10,7 +10,7 @@ public class NPC : MonoBehaviour
     public NavMeshAgent NavMeshAgent;
 
     [SerializeField]
-    private InteractionPoint currentInteraction;
+    protected InteractionPoint currentInteraction;
     
     private Coroutine _destinationCoroutine;
     private Vector3 _navMeshDestination;
@@ -60,7 +60,7 @@ public class NPC : MonoBehaviour
         SetDestination(targetPosition);
     }
     
-    public void FinishInteraction()
+    public virtual void FinishInteraction()
     {
         currentInteraction = null;
     }
@@ -70,7 +70,7 @@ public class NPC : MonoBehaviour
         
     }
 
-    public void InvokeFreeAction()
+    protected virtual void InvokeFreeAction()
     {
         OnFree?.Invoke();
     }

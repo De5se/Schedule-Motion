@@ -248,6 +248,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3307586360022109461, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
+      propertyPath: studyRoom
+      value: 
+      objectReference: {fileID: 8605769853163529191}
     - target: {fileID: 7549067555859461186, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
@@ -314,6 +318,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3307586360022109461, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
+      propertyPath: studyRoom
+      value: 
+      objectReference: {fileID: 8605769853163529191}
     - target: {fileID: 7549067555859461186, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
@@ -380,6 +388,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3307586360022109461, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
+      propertyPath: studyRoom
+      value: 
+      objectReference: {fileID: 8605769853163529191}
     - target: {fileID: 7549067555859461186, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
@@ -446,6 +458,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3307586360022109461, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
+      propertyPath: studyRoom
+      value: 
+      objectReference: {fileID: 8605769853163529191}
     - target: {fileID: 7549067555859461186, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
