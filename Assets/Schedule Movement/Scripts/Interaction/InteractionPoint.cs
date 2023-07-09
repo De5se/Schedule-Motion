@@ -30,6 +30,8 @@ namespace Schedule_Movement.Scripts
         protected ChronosBehaviour LastPatient;
 
         public event Action OnFree;
+        public event Action OnInteractionStarted;
+        public event Action OnInteractionFinished;
 
         public bool SetChronosFree => setChronosFree;
 
@@ -86,6 +88,7 @@ namespace Schedule_Movement.Scripts
         protected virtual void StartInteraction()
         {
             _interactionCoroutine = StartCoroutine(Interaction());
+            OnInteractionStarted?.Invoke();
         }
 
         private IEnumerator Interaction()
@@ -104,6 +107,7 @@ namespace Schedule_Movement.Scripts
 
             _currentChronos = null;
             _currentEmployee = null;
+            OnInteractionFinished?.Invoke();
             OnFree?.Invoke();
         }
     }

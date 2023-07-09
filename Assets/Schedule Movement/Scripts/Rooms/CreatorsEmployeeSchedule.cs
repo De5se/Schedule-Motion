@@ -49,9 +49,19 @@ namespace Schedule_Movement.Scripts.Rooms
         protected override void FinishPeriod(TimePeriod timePeriod)
         {
             base.FinishPeriod(timePeriod);
-            if (timePeriod.PeriodType == PeriodType.DeliveryMaterials)
+            switch (timePeriod.PeriodType)
             {
-                creatingRoom.ClearMaterialsCount();
+                case PeriodType.DeliveryMaterials:
+                    creatingRoom.ClearMaterialsCount();
+                    break;
+                case PeriodType.Study or PeriodType.HavingFood:
+                {
+                    foreach (var usingRoom in usingRooms)
+                    {
+                        usingRoom.ClearMaterialsCount();
+                    }
+                    break;
+                }
             }
         }
 
@@ -76,6 +86,9 @@ namespace Schedule_Movement.Scripts.Rooms
                 case PeriodType.HavingFood:
                     SendEmployeesToTargetRoom(employee);
                     break;
+                case PeriodType.ChillRoom:
+                case PeriodType.Park:
+                case PeriodType.Sleep:
                 default:
                     throw new ArgumentOutOfRangeException();
             }

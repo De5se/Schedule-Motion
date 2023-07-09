@@ -6,17 +6,24 @@ namespace Schedule_Movement.Scripts.Rooms
     public class CreatorsInteractionRoom : InteractionRoom
     {
         [field: Space(10)]
-        [ShowInInspector, ReadOnly] public int CreatedItems { get; private set; }
-        private CreatingMaterialPoint[] _creatingPoints;
-        
+        [ShowInInspector, ReadOnly] 
+        public int CreatedItems { get; private set; }
+        [ShowInInspector, ReadOnly] 
+        private CreatingMaterialsItem[] _creatingItems;
+
+        protected override void Awake()
+        {
+            base.Awake();
+            _creatingItems = GetComponentsInChildren<CreatingMaterialsItem>(true);
+        }
+
         protected override void Start()
         {
             base.Start();
-            _creatingPoints = GetComponentsInChildren<CreatingMaterialPoint>(true);
 
-            foreach (var point in _creatingPoints)
+            foreach (var item in _creatingItems)
             {
-                point.OnCreated += AddItem;
+                item.OnInteractionFinished += AddItem;
             }
         }
         

@@ -11,28 +11,39 @@ public class InteractionItem : MonoBehaviour
     [SerializeField] private InteractionType interactionType;
     [SerializeField] private bool isBought;
     [ShowInInspector, ReadOnly]
-    private InteractionPoint[] _interactionPoint;
+    protected InteractionPoint[] InteractionPoint;
     
-    public bool HasPlace(InteractionType targetType) => isBought && _interactionPoint.Any(ip => ip.HasNpcPlace(targetType));
+    public bool HasPlace(InteractionType targetType) => isBought && InteractionPoint.Any(ip => ip.HasNpcPlace(targetType));
 
     public InteractionType InteractionType => interactionType;
 
     public event Action OnFree;
+    public event Action OnInteractionStarted;
+    public event Action OnInteractionFinished;
 
-    private void Awake()
+
+    protected virtual  void Awake()
     {
-        _interactionPoint = GetComponentsInChildren<InteractionPoint>();
+        InteractionPoint = GetComponentsInChildren<InteractionPoint>(true);
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         UpdateItemState();
 
-        foreach (var ip in _interactionPoint)
+        foreach (var ip in InteractionPoint)
         {
             ip.OnFree += () =>
             {
                 OnFree?.Invoke();
+            };
+            ip.OnInteractionStarted += () =>
+            {
+                OnInteractionStarted?.Invoke();
+            };
+            ip.OnInteractionFinished += () =>
+            {
+                OnInteractionFinished?.Invoke();
             };
         }
     }
@@ -74,7 +85,7 @@ public class InteractionItem : MonoBehaviour
     }
 
     private InteractionPoint GetPointByType(InteractionType targetType) =>
-        _interactionPoint.FirstOrDefault(ip => ip.HasNpcPlace(targetType));
+        InteractionPoint.FirstOrDefault(ip => ip.HasNpcPlace(targetType));
 
 
     public void AddItemWithoutEmployee()

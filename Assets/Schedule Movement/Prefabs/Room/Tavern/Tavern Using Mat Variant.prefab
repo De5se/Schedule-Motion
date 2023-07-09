@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2713285866382180348
+--- !u!1001 &5341817861713033977
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479728574782646232, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.54
+      value: 4.85
       objectReference: {fileID: 0}
     - target: {fileID: 2479728574782646232, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29,11 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479728574782646232, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.77
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2479728574782646232, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2479728574782646232, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -41,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479728574782646232, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2479728574782646232, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_LocalRotation.z
@@ -59,36 +59,44 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3324450911495318924, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_Name
-      value: Materials Item Variant
+      value: Tavern Using Mat
       objectReference: {fileID: 0}
     - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: setEmployeeFree
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
-      propertyPath: isBought
-      value: 1
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: interactionType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
---- !u!1 &1271305429714567593 stripped
+--- !u!1 &9089075044475749548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
-  m_PrefabInstance: {fileID: 2713285866382180348}
+  m_PrefabInstance: {fileID: 5341817861713033977}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2449366306794913416
+--- !u!114 &6604140323563913167
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271305429714567593}
+  m_GameObject: {fileID: 9089075044475749548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af405faf10bfb74d952f3cdf21f7c86, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e57fda58f6c41a6ad82c00818b114e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRoom: {fileID: 0}

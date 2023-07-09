@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_Name
-      value: Cook Item Variant
+      value: Cook Item Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: setEmployeeFree
@@ -72,7 +72,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
     - {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
 --- !u!1 &7612902246315403252 stripped
@@ -95,29 +94,3 @@ MonoBehaviour:
   interactionRoom: {fileID: 0}
   interactionType: 0
   isBought: 0
---- !u!1 &8324823287232492589 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3324450911495318924, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
-  m_PrefabInstance: {fileID: 6747910468742060449}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5530934000277347742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8324823287232492589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4edb6288890a47d5897c4f9007302ea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  employeeInteractionPoint: {fileID: 8439800899325247606}
-  setEmployeeFree: 1
-  chronosInteractionPoint: {fileID: 0}
-  setChronosFree: 0
---- !u!4 &8439800899325247606 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2919835464008423895, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
-  m_PrefabInstance: {fileID: 6747910468742060449}
-  m_PrefabAsset: {fileID: 0}

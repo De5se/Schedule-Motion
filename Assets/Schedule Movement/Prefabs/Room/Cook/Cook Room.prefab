@@ -834,6 +834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cook Item Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8070942543570335797, guid: 221f5660770b4854e822f868b7382cd4, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 683567116481508440}
     - target: {fileID: 9208912161446608505, guid: 221f5660770b4854e822f868b7382cd4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -970,6 +974,10 @@ PrefabInstance:
       propertyPath: isBought
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8070942543570335797, guid: 221f5660770b4854e822f868b7382cd4, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 683567116481508440}
     - target: {fileID: 9208912161446608505, guid: 221f5660770b4854e822f868b7382cd4, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1032,6 +1040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cook Item Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8070942543570335797, guid: 221f5660770b4854e822f868b7382cd4, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 683567116481508440}
     - target: {fileID: 9208912161446608505, guid: 221f5660770b4854e822f868b7382cd4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1234,6 +1246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cook Item Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8070942543570335797, guid: 221f5660770b4854e822f868b7382cd4, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 683567116481508440}
     - target: {fileID: 9208912161446608505, guid: 221f5660770b4854e822f868b7382cd4, type: 3}
       propertyPath: m_RootOrder
       value: 1

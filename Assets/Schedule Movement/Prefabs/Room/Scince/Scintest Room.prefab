@@ -887,6 +887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Creating Item (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2449366306794913416, guid: 1bdf82f89e3290e40907233afaae75f1, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 5617028223473657270}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bdf82f89e3290e40907233afaae75f1, type: 3}
 --- !u!4 &486518279177029953 stripped
@@ -953,6 +957,10 @@ PrefabInstance:
       propertyPath: isBought
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2449366306794913416, guid: 1bdf82f89e3290e40907233afaae75f1, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 5617028223473657270}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bdf82f89e3290e40907233afaae75f1, type: 3}
 --- !u!4 &127930190022000979 stripped
@@ -1015,6 +1023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Creating Item (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2449366306794913416, guid: 1bdf82f89e3290e40907233afaae75f1, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 5617028223473657270}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bdf82f89e3290e40907233afaae75f1, type: 3}
 --- !u!4 &1024410541766321284 stripped
@@ -1221,6 +1233,10 @@ PrefabInstance:
       propertyPath: isBought
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2449366306794913416, guid: 1bdf82f89e3290e40907233afaae75f1, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 5617028223473657270}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bdf82f89e3290e40907233afaae75f1, type: 3}
 --- !u!4 &8951122286397620750 stripped
