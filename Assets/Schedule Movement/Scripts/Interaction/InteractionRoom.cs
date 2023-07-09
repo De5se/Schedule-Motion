@@ -7,8 +7,8 @@ public class InteractionRoom : MonoBehaviour
 {
     [SerializeField] private Transform itemsParent;
 
-    [SerializeField] private QueueBase patientQueue;
-    [SerializeField] private FreeTimePointsQueue employeeQueue;
+    [SerializeField] protected QueueBase patientQueue;
+    [SerializeField] protected FreeTimePointsQueue employeeQueue;
 
     private InteractionItem[] _items;
 
@@ -77,13 +77,15 @@ public class InteractionRoom : MonoBehaviour
     
     private void TryMoveNpc()
     {
-        TryMovePatients();
-        AskForEmployee();
+        if (patientQueue != null)
+            TryMovePatients();
+        if (employeeQueue != null)
+            AskForEmployee();
     }
     
-    private void TryMovePatients()
+    protected virtual void TryMovePatients()
     {
-        if (patientQueue == null || patientQueue.IsEmpty)
+        if (patientQueue.IsEmpty)
         {
             return;
         }

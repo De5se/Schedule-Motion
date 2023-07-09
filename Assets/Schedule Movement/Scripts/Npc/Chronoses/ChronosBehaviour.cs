@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using Schedule_Movement.Scripts;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class ChronosBehaviour : NPC
@@ -39,7 +40,19 @@ public class ChronosBehaviour : NPC
         ChangeState(ChronosState.Settle);
         MoveToTheRoom();
     }
-    
+
+    public override void SetInteraction(InteractionPoint interactionPoint, Vector3 targetPosition)
+    {
+        base.SetInteraction(interactionPoint, targetPosition);
+        ChangeState(ChronosState.Scheduled);
+    }
+
+    protected override void InvokeFreeAction()
+    {
+        ChangeState(ChronosState.FreeTime);
+        base.InvokeFreeAction();
+    }
+
     private void MoveToTheRoom()
     {
         SetDestination(PatientRoom.transform.position);
@@ -53,6 +66,7 @@ public class ChronosBehaviour : NPC
             PatientRoom.SavePatient(this);
         }
 
-        ChangeState(ChronosState.Scheduled);
+        // add npc to currentRoom
+        ChangeState(ChronosState.FreeTime);
     }
 }

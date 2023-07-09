@@ -21,6 +21,10 @@ namespace Schedule_Movement.Scripts.Rooms
         public void AddChronos(ChronosBehaviour chronosBehaviour)
         {
             _chronoses.Add(chronosBehaviour);
+            chronosBehaviour.OnFree += () =>
+            {
+                SetPatientToCurrentInteractionRoom(chronosBehaviour);
+            };
             SetPatientToCurrentInteractionRoom(chronosBehaviour);
         }
 
@@ -28,9 +32,17 @@ namespace Schedule_Movement.Scripts.Rooms
         {
             base.StartPeriod(timePeriod);
 
+            if (CurrentPeriod.PeriodType == PeriodType.Sleep)
+            {
+                patientsInteractionRoom.SetSleepPeriod(true);
+            }
+            
             foreach (var chronos in _chronoses)
             {
-                SetPatientToCurrentInteractionRoom(chronos);
+                if (chronos.CurrentState == ChronosState.FreeTime)
+                {
+                    SetPatientToCurrentInteractionRoom(chronos);
+                }
             }
         }
 
@@ -53,6 +65,7 @@ namespace Schedule_Movement.Scripts.Rooms
                     park.ClearPatientQueue();
                     break;
                 case PeriodType.Sleep:
+                    patientsInteractionRoom.SetSleepPeriod(false);
                     patientsInteractionRoom.ClearPatientQueue();
                     break;
                 default:

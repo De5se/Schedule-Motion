@@ -5,6 +5,7 @@ public enum ChronosState
     Settle,
     GoingHome,
     Scheduled,
+    FreeTime,
     Angry,
     Fighting,
     Prison,

@@ -1207,6 +1207,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 4924207553073527024}
+    - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionType
       value: 2
       objectReference: {fileID: 0}
@@ -1289,6 +1293,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 4924207553073527024}
+    - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionType
       value: 2
       objectReference: {fileID: 0}
@@ -1367,6 +1375,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 4924207553073527024}
+    - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionType
       value: 2
       objectReference: {fileID: 0}
@@ -1444,6 +1456,10 @@ PrefabInstance:
       propertyPath: setEmployeeFree
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: interactionRoom
+      value: 
+      objectReference: {fileID: 4924207553073527024}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionType
       value: 2

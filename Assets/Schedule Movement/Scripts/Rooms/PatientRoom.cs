@@ -31,7 +31,7 @@ public class PatientRoom : MonoBehaviour
     private void CreateStartPatient()
     {
         var chronos = CreatePatient(waitPoint.position);
-        chronos.ChangeState(ChronosState.Scheduled);
+        chronos.ChangeState(ChronosState.FreeTime);
         patientScheduleManager.AddChronos(chronos);
     }
 
