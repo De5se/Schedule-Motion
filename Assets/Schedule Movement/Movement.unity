@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2287ea625c6b62340bcaf2b7318ab51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTime: {x: 23, y: 50}
+  gameTime: {x: 7, y: 25}
 --- !u!1 &745043013
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +758,7 @@ Transform:
   - {fileID: 1258639724}
   - {fileID: 694357490}
   - {fileID: 1087634653}
+  - {fileID: 1082282204}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -915,13 +916,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082282203}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1838597564}
-  m_RootOrder: 2
+  m_Father: {fileID: 824841257}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1082282205
 MonoBehaviour:
@@ -1095,7 +1096,7 @@ PrefabInstance:
     - target: {fileID: 1209869861457426873, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: tavern
       value: 
-      objectReference: {fileID: 4854382381793684067}
+      objectReference: {fileID: 4854382381793684069}
     - target: {fileID: 1209869861457426873, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: gameTimeManager
       value: 
@@ -1107,7 +1108,7 @@ PrefabInstance:
     - target: {fileID: 1209869861986578809, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: tavern
       value: 
-      objectReference: {fileID: 4854382381793684067}
+      objectReference: {fileID: 4854382381793684069}
     - target: {fileID: 1209869861986578809, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: gameTimeManager
       value: 
@@ -1119,7 +1120,7 @@ PrefabInstance:
     - target: {fileID: 1209869862449832186, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: tavern
       value: 
-      objectReference: {fileID: 4854382381793684067}
+      objectReference: {fileID: 4854382381793684069}
     - target: {fileID: 1209869862449832186, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: gameTimeManager
       value: 
@@ -1179,7 +1180,7 @@ PrefabInstance:
     - target: {fileID: 8695756358845578244, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: tavern
       value: 
-      objectReference: {fileID: 4854382381793684067}
+      objectReference: {fileID: 4854382381793684069}
     - target: {fileID: 8695756358845578244, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: gameTimeManager
       value: 
@@ -1370,7 +1371,6 @@ Transform:
   m_Children:
   - {fileID: 747967894}
   - {fileID: 20144117}
-  - {fileID: 1082282204}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1616,7 +1616,7 @@ PrefabInstance:
     - target: {fileID: 1209869861457426873, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: tavern
       value: 
-      objectReference: {fileID: 4854382381793684067}
+      objectReference: {fileID: 4854382381793684069}
     - target: {fileID: 1209869861457426873, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: gameTimeManager
       value: 
@@ -1628,7 +1628,7 @@ PrefabInstance:
     - target: {fileID: 1209869861986578809, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: tavern
       value: 
-      objectReference: {fileID: 4854382381793684067}
+      objectReference: {fileID: 4854382381793684069}
     - target: {fileID: 1209869861986578809, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: gameTimeManager
       value: 
@@ -1640,7 +1640,7 @@ PrefabInstance:
     - target: {fileID: 1209869862449832186, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: tavern
       value: 
-      objectReference: {fileID: 4854382381793684067}
+      objectReference: {fileID: 4854382381793684069}
     - target: {fileID: 1209869862449832186, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: gameTimeManager
       value: 
@@ -1700,7 +1700,7 @@ PrefabInstance:
     - target: {fileID: 8695756358845578244, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: tavern
       value: 
-      objectReference: {fileID: 4854382381793684067}
+      objectReference: {fileID: 4854382381793684069}
     - target: {fileID: 8695756358845578244, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
       propertyPath: gameTimeManager
       value: 
@@ -1717,17 +1717,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6225709558644116363, guid: 37dc9b806ce83c04c8c0083c94ecc9bd, type: 3}
   m_PrefabInstance: {fileID: 1528992782801609193}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4854382381793684067 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 989044650430039014, guid: 37dc9b806ce83c04c8c0083c94ecc9bd, type: 3}
-  m_PrefabInstance: {fileID: 1528992782801609193}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb6e4e96aef826428535c6dd1853942, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4854382381793684069 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8637351077025604493, guid: 37dc9b806ce83c04c8c0083c94ecc9bd, type: 3}

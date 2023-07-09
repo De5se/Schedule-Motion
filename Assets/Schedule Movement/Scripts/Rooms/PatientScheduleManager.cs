@@ -38,6 +38,7 @@ namespace Schedule_Movement.Scripts.Rooms
             
             foreach (var chronos in _chronoses)
             {
+                chronos.CurrentRoomInteraction = 0;
                 if (chronos.CurrentState == ChronosState.FreeTime)
                 {
                     SetPatientToCurrentInteractionRoom(chronos);
@@ -70,11 +71,6 @@ namespace Schedule_Movement.Scripts.Rooms
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            
-            foreach (var chronos in _chronoses)
-            {
-                chronos.CurrentRoomInteraction = 0;
-            }
         }
 
         private void SetPatientToCurrentInteractionRoom(ChronosBehaviour chronos)
@@ -82,6 +78,7 @@ namespace Schedule_Movement.Scripts.Rooms
             switch (CurrentPeriod.PeriodType)
             {
                 case PeriodType.ChillRoom:
+                case PeriodType.Sleep:
                     patientsInteractionRoom.AddPatient(chronos);
                     break;
                 case PeriodType.Study:
@@ -93,9 +90,8 @@ namespace Schedule_Movement.Scripts.Rooms
                 case PeriodType.Park:
                     park.AddPatient(chronos);
                     break;
-                case PeriodType.Sleep:
-                    patientsInteractionRoom.AddPatient(chronos);
-                    break;
+                case PeriodType.CreatingMaterials:
+                case PeriodType.DeliveryMaterials:
                 default:
                     throw new ArgumentOutOfRangeException();
             }
@@ -124,10 +120,10 @@ namespace Schedule_Movement.Scripts.Rooms
         {
             switch (chronos.CurrentRoomInteraction)
             {
-                case < 1:
+                case < 2:
                     tavern.AddPatient(chronos);
                     break;
-                case 1:
+                case 2:
                     chronos.SendToRoom();
                     break;
                 default:

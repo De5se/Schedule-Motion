@@ -298,7 +298,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimeManager: {fileID: 0}
-  periods: []
+  periods:
+  - startTime: {x: 6, y: 0}
+    finishTime: {x: 9, y: 0}
+    periodType: 5
+  - startTime: {x: 9, y: 0}
+    finishTime: {x: 12, y: 30}
+    periodType: 6
+  - startTime: {x: 12, y: 30}
+    finishTime: {x: 15, y: 30}
+    periodType: 5
+  - startTime: {x: 15, y: 30}
+    finishTime: {x: 17, y: 30}
+    periodType: 6
+  - startTime: {x: 17, y: 30}
+    finishTime: {x: 17, y: 31}
+    periodType: 2
   freeTimePoints: {fileID: 6395562033579696481}
   creatingRoom: {fileID: 683567116481508440}
   usingRooms: []

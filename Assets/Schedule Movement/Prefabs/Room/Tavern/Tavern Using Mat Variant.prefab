@@ -1,5 +1,101 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &835125619376837116
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2109898394877780093}
+  - component: {fileID: 7945229471525587742}
+  m_Layer: 0
+  m_Name: Interactive Point (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2109898394877780093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835125619376837116}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.516, z: 4.58}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7514316499213081889}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7945229471525587742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835125619376837116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d1ab52563947e481b9d99696aefe3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  employeeInteractionPoint: {fileID: 2109898394877780093}
+  setEmployeeFree: 0
+  chronosInteractionPoint: {fileID: 2109898394877780093}
+  setChronosFree: 1
+--- !u!1 &8516421545204201078
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636575971396112326}
+  - component: {fileID: 5916174308178016131}
+  m_Layer: 0
+  m_Name: Interactive Point (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &636575971396112326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8516421545204201078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.516, z: -5.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7514316499213081889}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5916174308178016131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8516421545204201078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8d1ab52563947e481b9d99696aefe3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  employeeInteractionPoint: {fileID: 636575971396112326}
+  setEmployeeFree: 0
+  chronosInteractionPoint: {fileID: 636575971396112326}
+  setChronosFree: 1
 --- !u!1001 &5341817861713033977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,7 +164,7 @@ PrefabInstance:
       value: Tavern Using Mat Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
-      propertyPath: setEmployeeFree
+      propertyPath: setChronosFree
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
@@ -82,6 +178,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+--- !u!4 &7514316499213081889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2479728574782646232, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+  m_PrefabInstance: {fileID: 5341817861713033977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9089075044475749548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
@@ -101,4 +202,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionRoom: {fileID: 0}
   interactionType: 1
-  isBought: 0
+  isBought: 1

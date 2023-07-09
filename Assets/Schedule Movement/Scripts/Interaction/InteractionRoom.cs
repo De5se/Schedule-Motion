@@ -59,7 +59,7 @@ public class InteractionRoom : MonoBehaviour
         AskForEmployee();
     }
     
-    public void AddPatient(ChronosBehaviour patient)
+    public virtual void AddPatient(ChronosBehaviour patient)
     {
         if (patientQueue.ContainsNpc(patient))
         {

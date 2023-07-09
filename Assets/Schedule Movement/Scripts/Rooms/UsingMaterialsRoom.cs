@@ -7,7 +7,7 @@ namespace Schedule_Movement.Scripts.Rooms
     {
         [Space(10)] 
         [ShowInInspector, ReadOnly]
-        private int _materialsLeft;
+        protected int MaterialsLeft;
         
         [ShowInInspector, ReadOnly] 
         private UsingMaterialItem[] _usingItems;
@@ -30,7 +30,7 @@ namespace Schedule_Movement.Scripts.Rooms
 
         public void AddMaterials(int materials)
         {
-            _materialsLeft += materials;
+            MaterialsLeft += materials;
         }
 
         public override void ClearPatientQueue()
@@ -44,12 +44,12 @@ namespace Schedule_Movement.Scripts.Rooms
 
         private void UseMaterial()
         {
-            _materialsLeft--;
+            MaterialsLeft--;
         }
         
         private void ClearMaterialsCount()
         {
-            _materialsLeft = 0;
+            MaterialsLeft = 0;
         }
     }
 }
