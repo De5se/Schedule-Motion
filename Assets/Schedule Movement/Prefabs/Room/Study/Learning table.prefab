@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5281138438811918659
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8719329302404557825}
-  m_Layer: 0
-  m_Name: Employee Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8719329302404557825
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5281138438811918659}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000016093256, y: 0, z: -1.3099886}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 214530305467620416}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3062303501884016023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_Name
-      value: using material Item Variant
+      value: Learning table
       objectReference: {fileID: 0}
     - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: setChronosFree
@@ -109,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: employeeInteractionPoint
       value: 
-      objectReference: {fileID: 8719329302404557825}
+      objectReference: {fileID: 0}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionRoom
       value: 
@@ -121,11 +90,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
---- !u!4 &214530305467620416 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2919835464008423895, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
-  m_PrefabInstance: {fileID: 3062303501884016023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2196752062834736066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}

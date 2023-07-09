@@ -104,10 +104,10 @@ namespace Schedule_Movement.Scripts.Rooms
         {
             switch (chronos.CurrentRoomInteraction)
             {
-                case < 1:
+                case < 3:
                     studyRoom.AddPatient(chronos);
                     break;
-                case 1:
+                case 3:
                     chronos.SendToRoom();
                     break;
                 default:

@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: Interactive Point
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   employeeInteractionPoint: {fileID: 2919835464008423895}
+  setEmployeeFree: 0
   chronosInteractionPoint: {fileID: 2919835464008423895}
+  setChronosFree: 0
 --- !u!1 &3747859741043703381
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,5 +148,3 @@ MonoBehaviour:
   interactionRoom: {fileID: 0}
   interactionType: 0
   isBought: 0
-  interactionPoint:
-  - {fileID: 5388236762088718992}
