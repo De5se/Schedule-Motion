@@ -11,7 +11,7 @@ namespace Schedule_Movement.Scripts.Rooms
         [Space(10)]
         [SerializeField] private FreeTimePointsQueue freeTimePoints;
 
-        [SerializeField] private InteractionRoom creatingRoom;
+        [SerializeField] private CreatorsInteractionRoom creatingRoom;
         [SerializeField] private InteractionRoom[] usingRooms;
 
         [ShowInInspector, ReadOnly] private List<Employee> _employees = new();
