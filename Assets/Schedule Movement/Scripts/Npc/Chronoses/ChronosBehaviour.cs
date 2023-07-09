@@ -43,6 +43,12 @@ public class ChronosBehaviour : NPC
         MoveToTheRoom();
     }
 
+    public void SendToRoom()
+    {
+        ChangeState(ChronosState.GoingHome);
+        MoveToTheRoom();
+    }
+
     public override void SetInteraction(InteractionPoint interactionPoint, Vector3 targetPosition)
     {
         base.SetInteraction(interactionPoint, targetPosition);
@@ -69,6 +75,6 @@ public class ChronosBehaviour : NPC
         }
 
         // add npc to currentRoom
-        ChangeState(ChronosState.FreeTime);
+        InvokeFreeAction();
     }
 }

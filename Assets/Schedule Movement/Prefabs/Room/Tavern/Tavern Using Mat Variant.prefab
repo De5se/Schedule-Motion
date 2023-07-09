@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_Name
-      value: Tavern Using Mat
+      value: Tavern Using Mat Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: setEmployeeFree
@@ -100,5 +100,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRoom: {fileID: 0}
-  interactionType: 0
+  interactionType: 1
   isBought: 0

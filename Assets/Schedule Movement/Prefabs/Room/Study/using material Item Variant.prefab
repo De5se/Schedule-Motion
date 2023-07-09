@@ -144,5 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionRoom: {fileID: 0}
-  interactionType: 2
+  interactionType: 1
   isBought: 0

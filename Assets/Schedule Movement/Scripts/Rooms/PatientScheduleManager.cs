@@ -25,7 +25,6 @@ namespace Schedule_Movement.Scripts.Rooms
             {
                 SetPatientToCurrentInteractionRoom(chronosBehaviour);
             };
-            SetPatientToCurrentInteractionRoom(chronosBehaviour);
         }
 
         protected override void StartPeriod(TimePeriod timePeriod)
@@ -107,25 +106,33 @@ namespace Schedule_Movement.Scripts.Rooms
 
         private void SendChronosToStudyRoom(ChronosBehaviour chronos)
         {
-            if (chronos.CurrentRoomInteraction < 1)
+            switch (chronos.CurrentRoomInteraction)
             {
-                studyRoom.AddPatient(chronos);
-            }
-            else
-            {
-                patientsInteractionRoom.AddPatient(chronos);
+                case < 1:
+                    studyRoom.AddPatient(chronos);
+                    break;
+                case 1:
+                    chronos.SendToRoom();
+                    break;
+                default:
+                    patientsInteractionRoom.AddPatient(chronos);
+                    break;
             }
         }
         
         private void SendChronosToTavern(ChronosBehaviour chronos)
         {
-            if (chronos.CurrentRoomInteraction < 1)
+            switch (chronos.CurrentRoomInteraction)
             {
-                tavern.AddPatient(chronos);
-            }
-            else
-            {
-                patientsInteractionRoom.AddPatient(chronos);
+                case < 1:
+                    tavern.AddPatient(chronos);
+                    break;
+                case 1:
+                    chronos.SendToRoom();
+                    break;
+                default:
+                    patientsInteractionRoom.AddPatient(chronos);
+                    break;
             }
         }
     }

@@ -12,7 +12,6 @@ namespace Schedule_Movement.Scripts.Npc.Agents
         public void UpdatePatient(ChronosBehaviour patient)
         {
             _targetChronos = patient;
-            InvokeFreeAction();
             SetDestination(patient.NavMeshAgent.destination);
             patient.DestinationReachedAction += StopAccompany;
         }
@@ -20,7 +19,7 @@ namespace Schedule_Movement.Scripts.Npc.Agents
         private void StopAccompany()
         {
             _targetChronos = null;
-            ChangeState(AgentState.FreeTime);
+            InvokeFreeAction();
         }
     }
 }

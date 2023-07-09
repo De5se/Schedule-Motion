@@ -33,15 +33,23 @@ namespace Schedule_Movement.Scripts.Rooms
             _materialsLeft += materials;
         }
 
-        public void ClearMaterialsCount()
+        public override void ClearPatientQueue()
         {
-            _materialsLeft = 0;
+            base.ClearPatientQueue();
+            ClearMaterialsCount();
+
+            employeeQueue.ClearQueue();
         }
 
 
         private void UseMaterial()
         {
             _materialsLeft--;
+        }
+        
+        private void ClearMaterialsCount()
+        {
+            _materialsLeft = 0;
         }
     }
 }

@@ -70,7 +70,7 @@ public class InteractionRoom : MonoBehaviour
         TryMovePatients();
     }
 
-    public void ClearPatientQueue()
+    public virtual void ClearPatientQueue()
     {
         patientQueue.ClearQueue();
     }

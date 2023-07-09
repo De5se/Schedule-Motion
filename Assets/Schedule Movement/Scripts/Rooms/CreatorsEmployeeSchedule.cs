@@ -62,11 +62,6 @@ namespace Schedule_Movement.Scripts.Rooms
 
         private void FinishUsingPeriod()
         {
-            foreach (var usingRoom in usingRooms)
-            {
-                usingRoom.ClearMaterialsCount();
-            }
-            
             foreach (var employee in _employees)
             {
                 if (employee.AgentState == AgentState.FreeTime)
