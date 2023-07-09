@@ -182,15 +182,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2272540636552933533, guid: 6d4dc786375915045a02c8c20b6bc100, type: 3}
   m_PrefabInstance: {fileID: 3691714435122846487}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8605769853163529191 stripped
+--- !u!114 &8105851343553198142 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4924207553073527024, guid: 6d4dc786375915045a02c8c20b6bc100, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4847665822622130985, guid: 6d4dc786375915045a02c8c20b6bc100, type: 3}
   m_PrefabInstance: {fileID: 3691714435122846487}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb6e4e96aef826428535c6dd1853942, type: 3}
+  m_Script: {fileID: 11500000, guid: d7273ae56ef043acb05dcad9bbc502a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4408103192347458668
@@ -251,11 +251,11 @@ PrefabInstance:
     - target: {fileID: 3307586360022109461, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: studyRoom
       value: 
-      objectReference: {fileID: 8605769853163529191}
+      objectReference: {fileID: 8105851343553198142}
     - target: {fileID: 7549067555859461186, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
-      objectReference: {fileID: 8605769853163529191}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
 --- !u!4 &3220695040686882641 stripped
@@ -321,11 +321,11 @@ PrefabInstance:
     - target: {fileID: 3307586360022109461, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: studyRoom
       value: 
-      objectReference: {fileID: 8605769853163529191}
+      objectReference: {fileID: 8105851343553198142}
     - target: {fileID: 7549067555859461186, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
-      objectReference: {fileID: 8605769853163529191}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
 --- !u!4 &3220695041235695505 stripped
@@ -391,11 +391,11 @@ PrefabInstance:
     - target: {fileID: 3307586360022109461, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: studyRoom
       value: 
-      objectReference: {fileID: 8605769853163529191}
+      objectReference: {fileID: 8105851343553198142}
     - target: {fileID: 7549067555859461186, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
-      objectReference: {fileID: 8605769853163529191}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
 --- !u!4 &3220695040014429906 stripped
@@ -461,11 +461,11 @@ PrefabInstance:
     - target: {fileID: 3307586360022109461, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: studyRoom
       value: 
-      objectReference: {fileID: 8605769853163529191}
+      objectReference: {fileID: 8105851343553198142}
     - target: {fileID: 7549067555859461186, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
-      objectReference: {fileID: 8605769853163529191}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455b5d6440f261d409bf2075389952ef, type: 3}
 --- !u!4 &4960133897460150828 stripped

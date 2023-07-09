@@ -549,6 +549,9 @@ MonoBehaviour:
   - startTime: {x: 6, y: 0}
     finishTime: {x: 8, y: 0}
     periodType: 6
+  - startTime: {x: 8, y: 0}
+    finishTime: {x: 10, y: 30}
+    periodType: 1
   freeTimePoints: {fileID: 3857617198471008630}
   creatingRoom: {fileID: 5617028223473657270}
   usingRooms: []

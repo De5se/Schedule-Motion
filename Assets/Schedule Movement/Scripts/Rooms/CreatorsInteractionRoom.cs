@@ -5,8 +5,8 @@ namespace Schedule_Movement.Scripts.Rooms
 {
     public class CreatorsInteractionRoom : InteractionRoom
     {
-        [Space(10)]
-        [ShowInInspector, ReadOnly] private int _createdItems;
+        [field: Space(10)]
+        [ShowInInspector, ReadOnly] public int CreatedItems { get; private set; }
         private CreatingMaterialPoint[] _creatingPoints;
         
         protected override void Start()
@@ -22,7 +22,17 @@ namespace Schedule_Movement.Scripts.Rooms
         
         private void AddItem()
         {
-            _createdItems++;
+            CreatedItems++;
+        }
+
+        public void ClearMaterialsCount()
+        {
+            CreatedItems = 0;
+        }
+        
+        public void TakeMaterials(int amount)
+        {
+            CreatedItems -= amount;
         }
     }
 }

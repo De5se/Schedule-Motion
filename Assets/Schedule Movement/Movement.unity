@@ -290,6 +290,18 @@ PrefabInstance:
       propertyPath: gameTimeManager
       value: 
       objectReference: {fileID: 694357491}
+    - target: {fileID: 4784298375025131622, guid: a027b988fdbe0cc4ebd97953af326832, type: 3}
+      propertyPath: usingRooms.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784298375025131622, guid: a027b988fdbe0cc4ebd97953af326832, type: 3}
+      propertyPath: usingRooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 1808640456}
+    - target: {fileID: 4784298375025131622, guid: a027b988fdbe0cc4ebd97953af326832, type: 3}
+      propertyPath: usingRooms.Array.data[1]
+      value: 
+      objectReference: {fileID: 276283176}
     - target: {fileID: 5060049267256346479, guid: a027b988fdbe0cc4ebd97953af326832, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -345,6 +357,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5060049267256346479, guid: a027b988fdbe0cc4ebd97953af326832, type: 3}
   m_PrefabInstance: {fileID: 246419260}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &276283176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8105851343553198142, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
+  m_PrefabInstance: {fileID: 1137301296}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7273ae56ef043acb05dcad9bbc502a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &283504301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,22 +1324,22 @@ Transform:
   m_Father: {fileID: 6343319842629954715}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1765182539 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8605769853163529191, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
-  m_PrefabInstance: {fileID: 4408103193289494416}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb6e4e96aef826428535c6dd1853942, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1789526157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4408103192662052637, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
   m_PrefabInstance: {fileID: 4408103193289494416}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1808640456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8105851343553198142, guid: d108ce2145e619c4a9769ff6b1fea080, type: 3}
+  m_PrefabInstance: {fileID: 4408103193289494416}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7273ae56ef043acb05dcad9bbc502a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1838597563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +1728,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eb6e4e96aef826428535c6dd1853942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4854382381793684069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8637351077025604493, guid: 37dc9b806ce83c04c8c0083c94ecc9bd, type: 3}
+  m_PrefabInstance: {fileID: 1528992782801609193}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c64e9ce31824505a640272a963341d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4872391653409228877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1815,7 +1849,7 @@ PrefabInstance:
     - target: {fileID: 1971927206532016938, guid: 2257bc74905f84245bde9ed2f5a760e2, type: 3}
       propertyPath: periods.Array.data[1].interactionRoom
       value: 
-      objectReference: {fileID: 1765182539}
+      objectReference: {fileID: 0}
     - target: {fileID: 7061805596949568597, guid: 2257bc74905f84245bde9ed2f5a760e2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2003,5 +2037,13 @@ PrefabInstance:
       propertyPath: gameTimeManager
       value: 
       objectReference: {fileID: 694357491}
+    - target: {fileID: 3943021666543250696, guid: d386c3a873512f1408c381cf59f616a5, type: 3}
+      propertyPath: usingRooms.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943021666543250696, guid: d386c3a873512f1408c381cf59f616a5, type: 3}
+      propertyPath: usingRooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 4854382381793684069}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d386c3a873512f1408c381cf59f616a5, type: 3}

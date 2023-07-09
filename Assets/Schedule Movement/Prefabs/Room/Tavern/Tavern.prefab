@@ -466,6 +466,7 @@ GameObject:
   - component: {fileID: 6225709558644116363}
   - component: {fileID: 733942256659620011}
   - component: {fileID: 989044650430039014}
+  - component: {fileID: 8637351077025604493}
   m_Layer: 0
   m_Name: Tavern
   m_TagString: Untagged
@@ -516,6 +517,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1eb6e4e96aef826428535c6dd1853942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsParent: {fileID: 1241356377046607268}
+  patientQueue: {fileID: 5972751849477893158}
+  employeeQueue: {fileID: 7316228040615215603}
+--- !u!114 &8637351077025604493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4879301142684674443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c64e9ce31824505a640272a963341d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 1241356377046607268}

@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2272540636552933533}
   - component: {fileID: 4882177873009728445}
-  - component: {fileID: 4924207553073527024}
+  - component: {fileID: 4847665822622130985}
   m_Layer: 0
   m_Name: Study Room
   m_TagString: Untagged
@@ -112,7 +112,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4924207553073527024
+--- !u!114 &4847665822622130985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 745703050605007517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eb6e4e96aef826428535c6dd1853942, type: 3}
+  m_Script: {fileID: 11500000, guid: d7273ae56ef043acb05dcad9bbc502a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemsParent: {fileID: 6401208799098265266}
@@ -1209,7 +1209,7 @@ PrefabInstance:
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionRoom
       value: 
-      objectReference: {fileID: 4924207553073527024}
+      objectReference: {fileID: 4847665822622130985}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionType
       value: 2
@@ -1295,7 +1295,7 @@ PrefabInstance:
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionRoom
       value: 
-      objectReference: {fileID: 4924207553073527024}
+      objectReference: {fileID: 4847665822622130985}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionType
       value: 2
@@ -1377,7 +1377,7 @@ PrefabInstance:
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionRoom
       value: 
-      objectReference: {fileID: 4924207553073527024}
+      objectReference: {fileID: 4847665822622130985}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionType
       value: 2
@@ -1459,7 +1459,7 @@ PrefabInstance:
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionRoom
       value: 
-      objectReference: {fileID: 4924207553073527024}
+      objectReference: {fileID: 4847665822622130985}
     - target: {fileID: 8107318881382206580, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: interactionType
       value: 2
