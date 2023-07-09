@@ -6,6 +6,8 @@ public class ChronosBehaviour : NPC
 {
     [ShowInInspector, ReadOnly] 
     public ChronosState CurrentState { get; private set; }
+    [ShowInInspector, ReadOnly] 
+    public int CurrentRoomInteraction { get; set; }
     
     private PatientRoom PatientRoom { get; set; }
     

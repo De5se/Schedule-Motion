@@ -7,10 +7,12 @@ namespace Schedule_Movement.Scripts
     public class NpcQueue : QueueBase
     {
         private List<Transform> _waitPoints;
-        
-        protected override void Start()
+
+        protected override void Awake()
         {
+            base.Awake();
             _waitPoints = transform.GetComponentsInChildren<Transform>().ToList();
+            _waitPoints.Remove(transform);
         }
 
         public override void AddNpc(NPC npc)
@@ -22,7 +24,7 @@ namespace Schedule_Movement.Scripts
         public override NPC GetNpc()
         {
             var npc = base.GetNpc();
-
+            MoveQueue();
             return npc;
         }
 

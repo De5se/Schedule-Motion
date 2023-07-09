@@ -50,10 +50,11 @@ namespace Schedule_Movement.Scripts.Rooms
         {
             base.FinishPeriod(timePeriod);
             
+            patientsInteractionRoom.ClearPatientQueue();
+            
             switch (timePeriod.PeriodType)
             {
                 case PeriodType.ChillRoom:
-                    patientsInteractionRoom.ClearPatientQueue();
                     break;
                 case PeriodType.Study:
                     studyRoom.ClearPatientQueue();
@@ -66,12 +67,15 @@ namespace Schedule_Movement.Scripts.Rooms
                     break;
                 case PeriodType.Sleep:
                     patientsInteractionRoom.SetSleepPeriod(false);
-                    patientsInteractionRoom.ClearPatientQueue();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
             
+            foreach (var chronos in _chronoses)
+            {
+                chronos.CurrentRoomInteraction = 0;
+            }
         }
 
         private void SetPatientToCurrentInteractionRoom(ChronosBehaviour chronos)
@@ -82,10 +86,10 @@ namespace Schedule_Movement.Scripts.Rooms
                     patientsInteractionRoom.AddPatient(chronos);
                     break;
                 case PeriodType.Study:
-                    studyRoom.AddPatient(chronos);
+                    SendChronosToStudyRoom(chronos);
                     break;
                 case PeriodType.HavingFood:
-                    tavern.AddPatient(chronos);
+                    SendChronosToTavern(chronos);
                     break;
                 case PeriodType.Park:
                     park.AddPatient(chronos);
@@ -95,6 +99,33 @@ namespace Schedule_Movement.Scripts.Rooms
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+
+            chronos.CurrentRoomInteraction++;
+        }
+
+
+        private void SendChronosToStudyRoom(ChronosBehaviour chronos)
+        {
+            if (chronos.CurrentRoomInteraction < 1)
+            {
+                studyRoom.AddPatient(chronos);
+            }
+            else
+            {
+                patientsInteractionRoom.AddPatient(chronos);
+            }
+        }
+        
+        private void SendChronosToTavern(ChronosBehaviour chronos)
+        {
+            if (chronos.CurrentRoomInteraction < 1)
+            {
+                tavern.AddPatient(chronos);
+            }
+            else
+            {
+                patientsInteractionRoom.AddPatient(chronos);
             }
         }
     }

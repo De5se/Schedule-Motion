@@ -55,12 +55,23 @@ namespace Schedule_Movement.Scripts.Rooms
                     creatingRoom.ClearMaterialsCount();
                     break;
                 case PeriodType.Study or PeriodType.HavingFood:
-                {
-                    foreach (var usingRoom in usingRooms)
-                    {
-                        usingRoom.ClearMaterialsCount();
-                    }
+                    FinishUsingPeriod();
                     break;
+            }
+        }
+
+        private void FinishUsingPeriod()
+        {
+            foreach (var usingRoom in usingRooms)
+            {
+                usingRoom.ClearMaterialsCount();
+            }
+            
+            foreach (var employee in _employees)
+            {
+                if (employee.AgentState == AgentState.FreeTime)
+                {
+                    AddEmployeeToCurrentRoom(employee);
                 }
             }
         }
