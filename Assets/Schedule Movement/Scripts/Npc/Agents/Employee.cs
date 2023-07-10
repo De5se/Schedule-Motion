@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using Schedule_Movement.Scripts.Environment.Items;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Schedule_Movement.Scripts.Npc.Agents
@@ -26,7 +27,7 @@ namespace Schedule_Movement.Scripts.Npc.Agents
 
         public override void FinishInteraction()
         {
-            var setFreeAfterFinish = currentInteraction.SetEmployeeFree;
+            var setFreeAfterFinish = CurrentInteraction.SetEmployeeFree;
             base.FinishInteraction();
 
             if (setFreeAfterFinish)

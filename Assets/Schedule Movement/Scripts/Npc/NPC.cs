@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Schedule_Movement.Scripts;
+using Schedule_Movement.Scripts.Environment.Items;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,8 +11,8 @@ public class NPC : MonoBehaviour
 {
     public NavMeshAgent NavMeshAgent;
 
-    [SerializeField]
-    protected InteractionPoint currentInteraction;
+    [ShowInInspector, ReadOnly]
+    protected InteractionPoint CurrentInteraction;
     
     private Coroutine _destinationCoroutine;
     private Vector3 _navMeshDestination;
@@ -56,13 +58,13 @@ public class NPC : MonoBehaviour
 
     public virtual void SetInteraction(InteractionPoint interactionPoint, Vector3 targetPosition)
     {
-        currentInteraction = interactionPoint;
+        CurrentInteraction = interactionPoint;
         SetDestination(targetPosition);
     }
     
     public virtual void FinishInteraction()
     {
-        currentInteraction = null;
+        CurrentInteraction = null;
     }
 
     public void StopInteraction()

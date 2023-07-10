@@ -1,4 +1,6 @@
 ﻿using Schedule_Movement.Scripts;
+using Schedule_Movement.Scripts.Environment.Items;
+using Schedule_Movement.Scripts.Environment.NpcRooms;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -10,8 +12,8 @@ public class ChronosBehaviour : NPC
     public int CurrentRoomInteraction { get; set; }
     
     private PatientRoom PatientRoom { get; set; }
-    
-    public void ChangeState(ChronosState targetState)
+
+    private void ChangeState(ChronosState targetState)
     {
         if (targetState == CurrentState)
         {
@@ -28,7 +30,7 @@ public class ChronosBehaviour : NPC
 
     public override void FinishInteraction()
     {
-        var setFreeAfterFinish = currentInteraction.SetChronosFree;
+        var setFreeAfterFinish = CurrentInteraction.SetChronosFree;
         base.FinishInteraction();
 
         if (setFreeAfterFinish)
