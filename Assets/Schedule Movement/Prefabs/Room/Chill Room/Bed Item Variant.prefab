@@ -13,7 +13,7 @@ GameObject:
   m_Layer: 0
   m_Name: Interactive Point (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -107,9 +107,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3324450911495318924, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 3747859741043703381, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: m_Name
-      value: Bed Item
+      value: Bed Item Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5388236762088718992, guid: 66068fc97f77bee459b5f6cd0e1036d1, type: 3}
       propertyPath: setChronosFree

@@ -1,7 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Schedule_Movement.Scripts;
 using Schedule_Movement.Scripts.Environment.Items;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -10,6 +8,7 @@ using UnityEngine.AI;
 public class NPC : MonoBehaviour
 {
     public NavMeshAgent NavMeshAgent;
+    [SerializeField] private NpcAnimator npcAnimator;
 
     [ShowInInspector, ReadOnly]
     protected InteractionPoint CurrentInteraction;
@@ -19,6 +18,10 @@ public class NPC : MonoBehaviour
     
     public event Action DestinationReachedAction;
     public event Action OnFree;
+    
+    public void UpdateAnimatorController(RuntimeAnimatorController animatorOverrideController,
+        bool finishWithIdle = false) =>
+        npcAnimator.UpdateAnimatorController(animatorOverrideController, finishWithIdle);
     
     private bool IsAgentStopped() =>
         Vector2.Distance(new Vector2(transform.position.x, transform.position.z),
@@ -47,15 +50,17 @@ public class NPC : MonoBehaviour
         
     private IEnumerator DestinationReachedCoroutine()
     {
+        npcAnimator.SetWalking();
+        
         yield return new WaitUntil(IsAgentStopped);
         Debug.Log($"{gameObject.name} reached destination");
+        npcAnimator.SetIdle();
         DestinationReachedAction?.Invoke();
     }
 
     public void SetStoppingDistance(float stoppingDistance) => NavMeshAgent.stoppingDistance = stoppingDistance;
     #endregion
-
-
+    
     public virtual void SetInteraction(InteractionPoint interactionPoint, Vector3 targetPosition)
     {
         CurrentInteraction = interactionPoint;

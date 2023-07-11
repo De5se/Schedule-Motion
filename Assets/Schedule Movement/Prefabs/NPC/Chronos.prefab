@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6887057990675505158}
   - component: {fileID: -2212279891026739423}
   - component: {fileID: 6887057990675505152}
+  - component: {fileID: -2835052508961155255}
+  - component: {fileID: -9060891465721028086}
   m_Layer: 0
   m_Name: Chronos
   m_TagString: Untagged
@@ -114,8 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NavMeshAgent: {fileID: 6887057990675505152}
-  currentInteraction: {fileID: 0}
-  currentState: 9
+  npcAnimator: {fileID: -2835052508961155255}
 --- !u!195 &6887057990675505152
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -138,6 +139,44 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2835052508961155255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887057990675505154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7e422d1a575c64d89be777e96fc9b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkAnimation: {fileID: 22100000, guid: b6f91007a86fb5d47b3e793d530420f1, type: 2}
+  runAnimation: {fileID: 22100000, guid: 3a0b28f178436a54a89707506c7436e6, type: 2}
+  defaultAnimations:
+  - {fileID: 22100000, guid: 84f3390f454029c4197c6bc970f0b05d, type: 2}
+  - {fileID: 22100000, guid: 2fd5d14bfabfa274889e3ecb129ad999, type: 2}
+  - {fileID: 22100000, guid: 089b6e8281d62b04881bb95f3b5a16e7, type: 2}
+--- !u!95 &-9060891465721028086
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887057990675505154}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 01735a07e5e513446bb551e177615615, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9a97ad465c3a5da41a50ade6b926f51a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &8282864766351549166
 PrefabInstance:
   m_ObjectHideFlags: 0

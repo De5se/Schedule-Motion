@@ -3,13 +3,16 @@ using System.Collections;
 using Schedule_Movement.Scripts.Npc.Agents;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Schedule_Movement.Scripts.Environment.Items
 {
     public class InteractionPoint : MonoBehaviour
     {
+        #region Variables
         [SerializeField] private Transform employeeInteractionPoint;
         [SerializeField] private bool setEmployeeFree;
+        [SerializeField] private bool finishEmployeeAnimationWithIdle;
         [SerializeField] private Transform chronosInteractionPoint;
         [SerializeField] private bool setChronosFree;
 
@@ -18,6 +21,24 @@ namespace Schedule_Movement.Scripts.Environment.Items
 
         [ShowInInspector, ReadOnly] protected Employee LastEmployee;
         [ShowInInspector, ReadOnly] protected ChronosBehaviour LastPatient;
+
+        #region Animations
+        [Space(10)]
+        [SerializeField] private bool leftPreviousAnimation;
+        [SerializeField] private AnimatorOverrideController[] patientAnimations;
+        [SerializeField] private AnimatorOverrideController[] patientWaitAnimations;
+        [SerializeField] private AnimatorOverrideController[] employeeAnimations;
+        
+        private AnimatorOverrideController PatientAnimation => patientAnimations.Length > 0
+            ? patientAnimations[Random.Range(0, patientAnimations.Length)]
+            : null;
+        private AnimatorOverrideController PatientWaitAnimation => patientWaitAnimations.Length > 0
+            ? patientWaitAnimations[Random.Range(0, patientWaitAnimations.Length)]
+            : null;
+        private AnimatorOverrideController EmployeeAnimation => employeeAnimations.Length > 0
+            ? employeeAnimations[Random.Range(0, employeeAnimations.Length)]
+            : null;
+        #endregion
         
         private InteractionItem _interactionItem;
         
@@ -34,6 +55,7 @@ namespace Schedule_Movement.Scripts.Environment.Items
         public bool SetChronosFree => setChronosFree;
 
         public bool SetEmployeeFree => setEmployeeFree;
+        #endregion
 
         private void Awake()
         {
@@ -85,6 +107,7 @@ namespace Schedule_Movement.Scripts.Environment.Items
 
         protected virtual void StartInteraction()
         {
+            UpdateNpcAnimators();
             _interactionCoroutine = StartCoroutine(Interaction());
             OnInteractionStarted?.Invoke();
         }
@@ -107,6 +130,23 @@ namespace Schedule_Movement.Scripts.Environment.Items
             _currentEmployee = null;
             OnInteractionFinished?.Invoke();
             OnFree?.Invoke();
+        }
+        
+        private void UpdateNpcAnimators()
+        {
+            if (leftPreviousAnimation)
+            {
+                return;
+            }
+
+            if (_currentEmployee != null)
+            {
+                _currentEmployee.UpdateAnimatorController(EmployeeAnimation, finishEmployeeAnimationWithIdle);
+            }
+            if (_currentChronos != null)
+            {
+                _currentChronos.UpdateAnimatorController(PatientAnimation);
+            }
         }
     }
 }
