@@ -26,6 +26,11 @@ namespace Schedule_Movement.Scripts.Environment.ScheduleManagers
                 AddEmployeeToCurrentRoom(employee);
             };
             AddEmployeeToCurrentRoom(employee);
+
+            employee.OnDestroyed += _ =>
+            {
+                _employees.Remove(_ as Employee);
+            };
         }
 
         protected override void StartPeriod(TimePeriod timePeriod)

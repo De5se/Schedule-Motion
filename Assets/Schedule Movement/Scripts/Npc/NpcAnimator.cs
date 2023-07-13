@@ -8,7 +8,8 @@ public class NpcAnimator : MonoBehaviour
     [SerializeField] private AnimatorOverrideController runAnimation;
     [SerializeField] private AnimatorOverrideController[] defaultAnimations;
     
-    private Animator _npcAnimator;
+    [SerializeField]
+    private Animator npcAnimator;
     private readonly int _offset = Animator.StringToHash("Offset");
 
     private Coroutine _changingToIdleAnimationCoroutine;
@@ -19,8 +20,7 @@ public class NpcAnimator : MonoBehaviour
     
     private void Awake()
     {
-        _npcAnimator = GetComponent<Animator>();
-        _npcAnimator.SetFloat(_offset, Random.Range(0f, 1f));
+        npcAnimator.SetFloat(_offset, Random.Range(0f, 1f));
         SetIdle();
     }
 
@@ -46,20 +46,20 @@ public class NpcAnimator : MonoBehaviour
             animatorOverrideController = DefaultAnimatorController;
             finishWithIdle = true;
         }
-        _npcAnimator.runtimeAnimatorController = animatorOverrideController;
+        npcAnimator.runtimeAnimatorController = animatorOverrideController;
         
         if (_changingToIdleAnimationCoroutine != null){
             StopCoroutine(_changingToIdleAnimationCoroutine);
         }
         if (finishWithIdle)
         {
-            _changingToIdleAnimationCoroutine = StartCoroutine(ChangeToIdle());
+            //_changingToIdleAnimationCoroutine = StartCoroutine(ChangeToIdle());
         }
     }
 
     private IEnumerator ChangeToIdle()
     {
-        var stateInfo = _npcAnimator.GetCurrentAnimatorStateInfo(0);
+        var stateInfo = npcAnimator.GetCurrentAnimatorStateInfo(0);
         var duration = stateInfo.length;
         yield return new WaitForSeconds(duration);
         SetIdle();

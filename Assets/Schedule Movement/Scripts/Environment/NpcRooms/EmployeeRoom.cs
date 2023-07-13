@@ -13,6 +13,7 @@ namespace Schedule_Movement.Scripts.Environment.NpcRooms
         
         private string _employeeCountKey;
 
+        [ShowInInspector, ReadOnly]
         private readonly List<Employee> _employees = new();
         
         protected virtual void Start()
@@ -29,6 +30,14 @@ namespace Schedule_Movement.Scripts.Environment.NpcRooms
             Save();
         }
         
+        [Button("Fire Employee")]
+        protected virtual void FireEmployee()
+        {
+            var lastEmployee = _employees[^1];
+            _employees.Remove(_employees[^1]);
+            lastEmployee.DestroyNpc();
+            Save();
+        }
 
         private void CreateStartEmployees(int count)
         {

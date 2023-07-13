@@ -41,6 +41,17 @@ public class FreeTimePointsQueue : QueueBase
         return npc;
     }
 
+    protected override void RemoveNpc(NPC npc)
+    {
+        base.RemoveNpc(npc);
+        if (_busyPoints.ContainsKey(npc) == false)
+        {
+            return;
+        }
+        _freePoints.Add(_busyPoints[npc]);
+        _busyPoints.Remove(npc);
+    }
+
     private void SetNpcToPoint(NPC npc)
     {
         var targetIndex = Random.Range(0, _freePoints.Count);

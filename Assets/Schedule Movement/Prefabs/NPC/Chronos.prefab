@@ -157,6 +157,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 84f3390f454029c4197c6bc970f0b05d, type: 2}
   - {fileID: 22100000, guid: 2fd5d14bfabfa274889e3ecb129ad999, type: 2}
   - {fileID: 22100000, guid: 089b6e8281d62b04881bb95f3b5a16e7, type: 2}
+  npcAnimator: {fileID: -9060891465721028086}
 --- !u!95 &-9060891465721028086
 Animator:
   serializedVersion: 5

@@ -21,12 +21,19 @@ namespace Schedule_Movement.Scripts
         public virtual void AddNpc(NPC npc)
         {
             Queue.Add(npc);
+            npc.OnDestroyed += RemoveNpc;
+        }
+
+        protected virtual void RemoveNpc(NPC npc)
+        {
+            Queue.Remove(npc);
         }
         
         public virtual NPC GetNpc()
         {
             var npc = Queue[0];
             Queue.RemoveAt(0);
+            npc.OnDestroyed -= RemoveNpc;
             return npc;
         }
 

@@ -28,6 +28,12 @@ namespace Schedule_Movement.Scripts
             return npc;
         }
 
+        protected override void RemoveNpc(NPC npc)
+        {
+            base.RemoveNpc(npc);
+            MoveQueue();
+        }
+
         private void MoveQueue()
         {
             for (var index = 0; index < Queue.Count; index++)

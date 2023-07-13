@@ -18,6 +18,7 @@ public class NPC : MonoBehaviour
     
     public event Action DestinationReachedAction;
     public event Action OnFree;
+    public event Action<NPC> OnDestroyed;
     
     public void UpdateAnimatorController(RuntimeAnimatorController animatorOverrideController,
         bool finishWithIdle = false) =>
@@ -104,4 +105,11 @@ public class NPC : MonoBehaviour
         }
     }
     #endregion
+
+    public virtual void DestroyNpc()
+    {
+        StopAllCoroutines();
+        OnDestroyed?.Invoke(this);
+        Destroy(gameObject);
+    }
 }
