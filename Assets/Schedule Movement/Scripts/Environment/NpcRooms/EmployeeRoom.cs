@@ -14,7 +14,7 @@ namespace Schedule_Movement.Scripts.Environment.NpcRooms
         private string _employeeCountKey;
 
         [ShowInInspector, ReadOnly]
-        private readonly List<Employee> _employees = new();
+        protected readonly List<Employee> Employees = new();
         
         protected virtual void Start()
         {
@@ -33,8 +33,8 @@ namespace Schedule_Movement.Scripts.Environment.NpcRooms
         [Button("Fire Employee")]
         protected virtual void FireEmployee()
         {
-            var lastEmployee = _employees[^1];
-            _employees.Remove(_employees[^1]);
+            var lastEmployee = Employees[^1];
+            Employees.Remove(Employees[^1]);
             lastEmployee.DestroyNpc();
             Save();
         }
@@ -50,7 +50,7 @@ namespace Schedule_Movement.Scripts.Environment.NpcRooms
         protected virtual Employee CreateEmployee(Vector3 startPosition)
         {
             var employee = Instantiate(employeePrefab, startPosition, Quaternion.identity, employeesParent);
-            _employees.Add(employee);
+            Employees.Add(employee);
             return employee;
         }
 

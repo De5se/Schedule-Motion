@@ -1,13 +1,15 @@
-﻿using Sirenix.OdinInspector;
+﻿using Schedule_Movement.Scripts.Npc.Fighting;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Schedule_Movement.Scripts.Npc.Agents
 {
-    public class AgentBehaviour : Employee
+    public class AgentBehaviour : Employee, IFightingUnit
     {
         [ShowInInspector, ReadOnly]
         private ChronosBehaviour _targetChronos;
         
+        public Transform Transform => transform;
         
         public void UpdatePatient(ChronosBehaviour patient)
         {
@@ -20,6 +22,21 @@ namespace Schedule_Movement.Scripts.Npc.Agents
         {
             _targetChronos = null;
             InvokeFreeAction();
+        }
+        
+        public void StartFighting()
+        {
+            if (AgentState == AgentState.Accompany)
+            {
+                StopAccompany();
+            }
+            if (AgentState == AgentState.Interaction)
+            {
+                //currentInteractionPoint.ForceStop();
+            }
+            
+            ChangeState(AgentState.Fighting);
+            (this as IFightingUnit).FightingNpc.StartFighting();
         }
     }
 }

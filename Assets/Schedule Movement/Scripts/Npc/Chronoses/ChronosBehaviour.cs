@@ -1,15 +1,18 @@
 ﻿using Schedule_Movement.Scripts;
 using Schedule_Movement.Scripts.Environment.Items;
 using Schedule_Movement.Scripts.Environment.NpcRooms;
+using Schedule_Movement.Scripts.Npc.Fighting;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class ChronosBehaviour : NPC
+public class ChronosBehaviour : NPC, IFightingUnit
 {
     [ShowInInspector, ReadOnly] 
     public ChronosState CurrentState { get; private set; }
     [ShowInInspector, ReadOnly] 
     public int CurrentRoomInteraction { get; set; }
+    
+    public Transform Transform => transform;
     
     private PatientRoom PatientRoom { get; set; }
 
@@ -78,5 +81,16 @@ public class ChronosBehaviour : NPC
 
         // add npc to currentRoom
         InvokeFreeAction();
+    }
+    
+    
+    public void StartFighting()
+    {
+        if (CurrentInteraction != null)
+        {
+            /////CurrentInteraction.ForceStop();
+        }
+        
+        (this as IFightingUnit).FightingNpc.StartFighting();
     }
 }
